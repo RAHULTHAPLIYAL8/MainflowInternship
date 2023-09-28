@@ -1,3 +1,59 @@
-<html>
-  <p>My name is rahul thapliyal</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .foot {
+
+            width: 100%;
+            height:100%;
+            position: absolute;
+            z-index:-1;
+        }
+        </style>
+</head>
+
+<body>
+    <img class="foot" src="mainflow1.jpg" alt="">
+    <img class="foot" src="mainflow2.jpg" alt="">
+    <img class="foot" src="mainflow3.jpg" alt="">
+    <img class="foot" src="mainflow4.jpg" alt="">
+    <div class="container">
+        <h1>Welcome to Carsign</h1>
+        <p>Enter the details for your account </p>
+        <form action="index.php" method="post">
+            <input type="text" name="name" id="name" placeholder="Enter your Name:">
+            <input type="text" name='section' id="section" placeholder="Enter your Age:">
+            <input type="email" name="email" id="email" placeholder="Enter your emailid">
+            <textarea name="desc" id="desc" cols="30" rows="10"
+                placeholder="Tell me about something your favourite car"></textarea>
+            <button class="but">submit</button>
+        </form>
+    </div>
+    <script>
+        var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("foot");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+    </script>
+
+</body>
+
 </html>
+<!-- INSERT INTO `footballers` (`sno`, `name`, `section`, `emailid`, `description`, `date`) VALUES ('1', 'Rahul Thapliyal',
+'E', 'rahulthapliyal23@gmail.com', 'Hello!!! My name is Rahul Thapliyal and I am from Delhi', current_timestamp()); -->
